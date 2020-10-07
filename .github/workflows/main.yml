@@ -48,8 +48,8 @@ jobs:
    - name: executing remote ssh commands to deploy
      uses: appleboy/ssh-action@master
      with:
-       host: ${{ secrets.HOST }}
-       username: ${{ secrets.USER }}
+       host: 84.201.143.137
+       username: pure_deception
        key: ${{ secrets.SSH_KEY }}
        passphrase: ${{ secrets.PASSPHRASE }} #
        script: |
