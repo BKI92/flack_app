@@ -51,7 +51,7 @@ jobs:
        host: 84.201.143.137
        username: pure_deception
        key: ${{ secrets.SSH_KEY }}
-       passphrase: ${{ secrets.PASSPHRASE }} #
+       passphrase: ${{ secrets.PASSPHRASE }} 
        script: |
          sudo docker pull <konstantin01>/<test_flack_app>
          sudo docker stop $(sudo docker ps -a -q)
