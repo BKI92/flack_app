@@ -38,7 +38,7 @@ jobs:
         with:
           username: konstantin01
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: konstantin01/flack_app
+          repository: konstantin01/flack_app:v1
           tag_with_ref: true
   
   deploy:
@@ -53,7 +53,7 @@ jobs:
        key: ${{ secrets.SSH_KEY }}
        passphrase: ${{ secrets.PASSPHRASE }} #
        script: |
-         sudo docker pull konstantin01/flack_app
+         sudo docker pull konstantin01/flack_app:v1
          sudo docker stop $(sudo docker ps -a -q)
          sudo docker run --rm -d -p 5000:5000 konstantin01/flack_app
       
